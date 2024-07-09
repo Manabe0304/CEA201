@@ -1,9 +1,9 @@
-; «« Comment begins with ';' to the end of a line 
+; Â«Â« Comment begins with ';' to the end of a line 
 ; From masm32\tutorial\console\demo1  
 ;
 ; Build this with the "Project" menu using  
 ; "Console Assemble and Link"
-; «««««««««««««««««««««««««««««««««««««««««««««««««««««««««
+; Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«Â«
 
     .486                                       ; create 32 bit code
     .model flat, stdcall                       ; 32 bit memory model
