@@ -1,13 +1,13 @@
 include  \masm32\include\masm32rt.inc
 
 .data
-    tieude db "CUng hoc CEA201",13,10,0       ;khai bao bien toan cuc
+    tieude db "Cung hoc CEA201",13,10,0       ;khai bao bien toan cuc
 
     sum PROTO:DWORD, :DWORD
 .code
 
 vidu:
-    print OFFSET tieude                       ;in ra iben toan cuc OFFSET
+    print OFFSET tieude                       ;in ra bien toan cuc OFFSET
     CALL ham1
     print chr$("Hoc ASSEMBLY that de!",13,10) 
     call ham1                                 ;goi ham khong truyen gia tri 
