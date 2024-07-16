@@ -10,7 +10,7 @@ start:
 
 main proc
     LOCAL ten:DWORD        
-    mov ten, input("Nhap ten: ") 
+    mov ten, input(13)  
     invoke xinchao, ten  
     ret
 main endp
