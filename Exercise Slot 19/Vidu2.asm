@@ -2,7 +2,7 @@ include \masm32\include\masm32rt.inc
 
 xinchao PROTO :DWORD      
 
-    .code                       
+.code                       
 
 start:                          
     call main                   
@@ -10,7 +10,7 @@ start:
 
 main proc
     LOCAL ten:DWORD        
-    mov ten, input("Nhap ten: ",13,10) 
+    mov ten, input("Nhap ten: ") 
     invoke xinchao, ten  
     ret
 main endp
