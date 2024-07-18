@@ -10,7 +10,7 @@ start:
 main proc
     LOCAL so: DWORD  
     LOCAL kq: DWORD
-    MOV so, sval(input(13))   
+    MOV so, sval(input("Nhap so: ",13))   
     invoke bienso, so 
 
     MOV kq, eax
