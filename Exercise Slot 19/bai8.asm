@@ -5,10 +5,10 @@ divide PROTO :DWORD, :DWORD
 .code
 
 start:
-    call ham1                                 ; goi ham khong truyen gia tri 
+    call main                                 ; goi ham khong truyen gia tri 
     exit                                      ; exit program
 
-    ham1 proc
+    main proc
         LOCAL a: DWORD                        ; khai bao bien cuc bo 
         LOCAL b: DWORD
         LOCAL kq: DWORD
@@ -21,7 +21,7 @@ start:
         print chr$("a / b = ")
         print str$(kq)
         ret
-    ham1 endp 
+    main endp 
 
     divide proc x:DWORD, y:DWORD
         mov eax, x
