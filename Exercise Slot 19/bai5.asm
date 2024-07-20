@@ -4,7 +4,7 @@ sum PROTO:DWORD, :DWORD
 
 .code
 
-vidu:
+start:
     call ham1                                 ;goi ham khong truyen gia tri 
     exit
 
@@ -28,4 +28,4 @@ vidu:
         add eax, y
         ret
     sum endp   
-end vidu
+end start
