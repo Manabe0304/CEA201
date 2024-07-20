@@ -1,6 +1,6 @@
 include  \masm32\include\masm32rt.inc
 
-dif PROTO:DWORD, :DWORD                       ;Tinh hieu cua 2 so
+difference PROTO:DWORD, :DWORD                       ;Tinh hieu cua 2 so
 
 .code
 
