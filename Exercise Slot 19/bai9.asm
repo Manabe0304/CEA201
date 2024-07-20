@@ -11,7 +11,6 @@ start:
     main proc
         LOCAL a: DWORD                        ;khai bao bien cuc bo 
         LOCAL b: DWORD
-        LOCAL kq: DWORD
         MOV a, sval(input("Nhap a: "))        ;SVAL chuyen string sang number
         MOV b, sval(input("Nhap b: "))
 
@@ -20,10 +19,14 @@ start:
     main endp 
 
     sum proc x:DWORD, y:DWORD
-        mov eax, x
-        add eax, y
-        print chr$("a + b = ")
-        print str$(eax)
-        ret
+       LOCAL kq: DWORD
+       mov eax, x                                ; Move first parameter to eax
+       add eax, y                                ; Add second parameter to eax
+       mov kq, eax                           ; Store the result in the result variable
+
+       print chr$("a + b = ")
+       print str$(kq)                        ; Print the result
+       ret
     sum endp   
 end start
+
