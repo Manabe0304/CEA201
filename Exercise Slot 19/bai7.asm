@@ -6,7 +6,7 @@ product PROTO :DWORD, :DWORD
 
 start:
     call ham1                                 ; goi ham khong truyen gia tri 
-    invoke ExitProcess, 0                    ; exit program
+    exit                                      ; exit program
 
     ham1 proc
         LOCAL a: DWORD                        ; khai bao bien cuc bo 
