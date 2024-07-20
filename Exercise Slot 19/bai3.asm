@@ -1,6 +1,6 @@
 include \masm32\include\masm32rt.inc
 
-xinchao PROTO :DWORD      
+xau PROTO :DWORD      
 
 .code                       
 
@@ -11,13 +11,13 @@ start:
 main proc
     LOCAL ten:DWORD        
     mov ten, input("Nhap string: ",13)  
-    invoke xinchao, ten  
+    invoke xau, ten  
     ret
 main endp
 
-xinchao proc string:DWORD
+xau proc string:DWORD
     print string                    
     ret
-xinchao endp
+xau endp
 
 end start                      
