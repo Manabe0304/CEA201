@@ -1,21 +1,21 @@
-include  \masm32\include\masm32rt.inc
+include \masm32\include\masm32rt.inc
 
-difference PROTO:DWORD, :DWORD                       ;Tinh hieu cua 2 so
+difference PROTO :DWORD, :DWORD                       ; Tinh hieu cua 2 so
 
 .code
 
-vidu:
-    call ham1                                 ;goi ham khong truyen gia tri 
-    exit
+start:
+    call ham1                                 ; goi ham khong truyen gia tri 
+    invoke ExitProcess, 0                    ; exit program
 
     ham1 proc
-        LOCAL a: DWORD                        ;khai bao bien cuc bo 
+        LOCAL a: DWORD                        ; khai bao bien cuc bo 
         LOCAL b: DWORD
         LOCAL kq: DWORD
-        MOV a, sval(input("Nhap a: "))        ;SVAL chuyen string sang number
+        MOV a, sval(input("Nhap a: "))        ; SVAL chuyen string sang number
         MOV b, sval(input("Nhap b: "))
 
-        INVOKE dif,a,b                        ;INVOKE goi ham co truyen bien
+        INVOKE difference, a, b               ; INVOKE goi ham co truyen bien
 
         mov kq, eax
         print chr$("a - b = ")
@@ -23,9 +23,10 @@ vidu:
         ret
     ham1 endp 
 
-    dif proc x:DWORD, y:DWORD
+    difference proc x:DWORD, y:DWORD
         mov eax, x
         sub eax, y
         ret
-    dif endp   
-end vidu
+    difference endp   
+
+end start
