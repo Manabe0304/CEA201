@@ -1,21 +1,21 @@
-include  \masm32\include\masm32rt.inc
+include \masm32\include\masm32rt.inc
 
-sum PROTO:DWORD, :DWORD
+divide PROTO :DWORD, :DWORD
 
 .code
 
-vidu:
-    call ham1                                 ;goi ham khong truyen gia tri 
-    exit
+start:
+    call ham1                                 ; goi ham khong truyen gia tri 
+    exit                                      ; exit program
 
     ham1 proc
-        LOCAL a: DWORD                        ;khai bao bien cuc bo 
+        LOCAL a: DWORD                        ; khai bao bien cuc bo 
         LOCAL b: DWORD
         LOCAL kq: DWORD
-        MOV a, sval(input("Nhap a: "))        ;SVAL chuyen string sang number
+        MOV a, sval(input("Nhap a: "))        ; SVAL chuyen string sang number
         MOV b, sval(input("Nhap b: "))
 
-        INVOKE sum,a,b                        ;INVOKE goi ham co truyen bien
+        INVOKE divide, a, b                   ; INVOKE goi ham co truyen bien
 
         mov kq, eax
         print chr$("a / b = ")
@@ -23,10 +23,11 @@ vidu:
         ret
     ham1 endp 
 
-    sum proc x:DWORD, y:DWORD
+    divide proc x:DWORD, y:DWORD
         mov eax, x
         xor edx, edx                              ; Clear EDX before division
         div y                                     ; Unsigned division
         ret
-    sum endp   
-end vidu
+    divide endp   
+
+end start
