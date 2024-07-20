@@ -1,6 +1,6 @@
 include  \masm32\include\masm32rt.inc
 
-sum PROTO:DWORD, :DWORD
+dif PROTO:DWORD, :DWORD                       ;Tinh hieu cua 2 so
 
 .code
 
@@ -15,7 +15,7 @@ vidu:
         MOV a, sval(input("Nhap a: "))        ;SVAL chuyen string sang number
         MOV b, sval(input("Nhap b: "))
 
-        INVOKE sum,a,b                        ;INVOKE goi ham co truyen bien
+        INVOKE dif,a,b                        ;INVOKE goi ham co truyen bien
 
         mov kq, eax
         print chr$("a - b = ")
@@ -23,9 +23,9 @@ vidu:
         ret
     ham1 endp 
 
-    sum proc x:DWORD, y:DWORD
+    dif proc x:DWORD, y:DWORD
         mov eax, x
         sub eax, y
         ret
-    sum endp   
+    dif endp   
 end vidu
